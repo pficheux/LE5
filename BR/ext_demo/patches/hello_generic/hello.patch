@@ -1,0 +1,12 @@
+diff -ruN hello_generic/hello_generic.c /tmp/hello_generic/hello_generic.c
+--- hello_generic/hello_generic.c	2016-12-21 17:23:15.452633481 +0100
++++ /tmp/hello_generic/hello_generic.c	2016-12-22 11:07:47.141525388 +0100
+@@ -4,7 +4,7 @@
+  
+ int main(int argc, char* argv[])
+ {
+-   printf("Hello, world! (Generic)\n");
++   printf("Hello, world! (Generic + patched)\n");
+ 
+    return 0;
+ }

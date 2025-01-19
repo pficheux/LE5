@@ -1,0 +1,12 @@
+diff -ruN a/hello_auto.c b/hello_auto.c
+--- a/hello_auto.c	2016-11-03 22:08:13.495997090 +0100
++++ b/hello_auto.c	2016-11-03 22:08:42.063996246 +0100
+@@ -4,7 +4,7 @@
+  
+ int main(int argc, char* argv[])
+ {
+-   printf("Hello, world! (autotools)\n");
++   printf("Hello, world! (autotools + patched)\n");
+ 
+    return 0;
+ }

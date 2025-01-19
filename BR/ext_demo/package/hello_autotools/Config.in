@@ -1,0 +1,4 @@
+config BR2_PACKAGE_HELLO_AUTOTOOLS
+	bool "Autotools example"
+	help
+	  Hello World Autotools package

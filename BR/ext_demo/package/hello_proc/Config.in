@@ -1,0 +1,5 @@
+config BR2_PACKAGE_HELLO_PROC
+	bool "hello proc module"
+	select BR2_LINUX_KERNEL
+	help
+	  hello /proc module

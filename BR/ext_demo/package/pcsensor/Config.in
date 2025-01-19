@@ -1,0 +1,6 @@
+config BR2_PACKAGE_PCSENSOR
+	bool "PCSENSOR utility"
+	select BR2_PACKAGE_LIBUSB_COMPAT
+	select BR2_PACKAGE_LIBUSB
+	help
+		PCSENSOR utility

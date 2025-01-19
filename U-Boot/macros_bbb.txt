@@ -1,0 +1,5 @@
+setenv rootpath /home/stage/rootfs_bbb
+setenv bootfile zImage
+setenv default_boot 'run findfdt; run init_console; run envboot; run distro_bootcmd'
+setenv select_boot 'while true; do; askenv os; if test "${os}" = "1"; then echo "SD"; run default_boot; elif test "${os}" = "2"; then echo "NFS"; run netboot;  else echo "Unknown OS !"; fi; done'
+saveenv

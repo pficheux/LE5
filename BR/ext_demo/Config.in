@@ -1,0 +1,5 @@
+source "$BR2_EXTERNAL_DEMO_PATH/package/hello_autotools/Config.in"
+source "$BR2_EXTERNAL_DEMO_PATH/package/hello_cmake/Config.in"
+source "$BR2_EXTERNAL_DEMO_PATH/package/hello_generic/Config.in"
+source "$BR2_EXTERNAL_DEMO_PATH/package/hello_proc/Config.in"
+

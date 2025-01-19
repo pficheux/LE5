@@ -1,0 +1,4 @@
+config BR2_PACKAGE_HELLO_CMAKE
+	bool "CMake example"
+	help
+	  Hello CMake package

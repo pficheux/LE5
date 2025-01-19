@@ -1,0 +1,10 @@
+Initialising tasks: 100% |#######################################| Time: 0:00:00
+NOTE: Executing SetScene Tasks
+NOTE: Executing RunQueue Tasks
+ERROR: example-0.1-r0 do_package_qa: QA Issue: No GNU_HASH in the elf binary: '/home/pierre/docs/le5/exemples/Yocto/poky/rpi3-build/tmp/work/cortexa7hf-neon-vfpv4-poky-linux-gnueabi/example/0.1-r0/packages-split/example/usr/bin/helloworld' [ldflags]
+ERROR: example-0.1-r0 do_package_qa: QA run found fatal errors. Please consider fixing them.
+ERROR: example-0.1-r0 do_package_qa: Function failed: do_package_qa
+ERROR: Logfile of failure stored in: /home/pierre/docs/le5/exemples/Yocto/poky/rpi3-build/tmp/work/cortexa7hf-neon-vfpv4-poky-linux-gnueabi/example/0.1-r0/temp/log.do_package_qa.10628
+ERROR: Task (/home/pierre/docs/le5/exemples/Yocto/poky/meta-example/recipes-example/example/example_0.1.bb:do_package_qa) failed with exit code '1'
+NOTE: Tasks Summary: Attempted 393 tasks of which 380 didn't need to be rerun and 1 failed.
+

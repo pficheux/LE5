@@ -1,0 +1,33 @@
+From 2b0f7a5eaab6f85c53308c32b2c47d5bacf246d8 Mon Sep 17 00:00:00 2001
+From: Pierre FICHEUX <pierre.ficheux@smile.fr>
+Date: Mon, 17 Jul 2017 09:46:45 +0200
+Subject: [PATCH] Added missing CPPFLAGS/CFLAGS/LDFLAGS in sample recipe for
+ morty branch
+
+This problem causes the following error :
+
+ERROR: example-0.1-r0 do_package_qa: QA Issue: No GNU_HASH in the elf binary
+
+
+Signed-off-by: Pierre FICHEUX <pierre.ficheux@smile.fr>
+---
+ .../target/arch/layer/recipes-example/example/example-recipe-0.1.bb    | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/scripts/lib/bsp/substrate/target/arch/layer/recipes-example/example/example-recipe-0.1.bb b/scripts/lib/bsp/substrate/target/arch/layer/recipes-example/example/example-recipe-0.1.bb
+index 5fbf594..2c478ad 100644
+--- a/scripts/lib/bsp/substrate/target/arch/layer/recipes-example/example/example-recipe-0.1.bb
++++ b/scripts/lib/bsp/substrate/target/arch/layer/recipes-example/example/example-recipe-0.1.bb
+@@ -14,7 +14,8 @@ SRC_URI = "file://helloworld.c"
+ S = "${WORKDIR}"
+ 
+ do_compile() {
+-	     ${CC} helloworld.c -o helloworld
++	     ${CC} ${CPPFLAGS} ${CFLAGS} -c helloworld.c -o helloworld.o
++	     ${CC} ${LDFLAGS} helloworld.o -o helloworld
+ }
+ 
+ do_install() {
+-- 
+2.7.4
+

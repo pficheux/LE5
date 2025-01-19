@@ -1,0 +1,25 @@
+#!/bin/sh
+
+NAME=mpl115a2
+
+case "$1" in
+  start)
+	echo -n "Starting $NAME"
+	/usr/bin/get_power.sh &
+	;;
+  stop)
+	echo -n "Stopping $NAME"
+	killall get_power.sh
+	;;
+  restart)
+	$0 stop
+	$0 start
+	;;
+  *)
+	N=/etc/init.d/$NAME
+	echo "Usage: $N {start|stop|restart}" >&2
+	exit 1
+	;;
+esac
+
+exit 0

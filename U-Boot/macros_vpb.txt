@@ -1,0 +1,12 @@
+setenv bootfile uImage
+setenv rootpath /home/stage/rootfs_qemu
+setenv loadaddr 200000
+setenv fileaddr 200000
+setenv nfsargs 'setenv bootargs console=ttyAMA0 mem=32M root=/dev/nfs nfsroot=${serverip}:${rootpath} ip=${ipaddr}:::::eth0:off'
+setenv flashargs 'setenv bootargs console=ttyAMA0 mem=32M root=/dev/mtdblock2 rootfstype=jffs2 mtdparts=physmap-flash.0:0x80000(u-boot)ro,0x7c0000(kernel),-(rootfs)'
+setenv kern_erase 'protect off 1:2-32; erase 1:2-32'
+setenv kern_write 'cp.b ${loadaddr} 34080000 ${filesize}; protect on 1:2-32'
+setenv root_erase 'protect off 1:33-255; erase 1:33-255'
+setenv root_write 'cp.b ${loadaddr} 34840000 ${filesize}; protect on 1:33-255'
+
+saveenv
